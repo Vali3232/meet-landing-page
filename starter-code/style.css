@@ -1,0 +1,289 @@
+:root{
+    /* Colors */
+     
+    --cyan-300: #8FE3F9;
+    --purple-300: #D9B8FF;
+    --cyan-600: #4D96A9;
+    --purple-600: #855FB1;
+
+    --neutral-100: #FAFAFA;
+    --neutral-300: #D1D1DF;
+    --neutral-600: #87879D;
+    --neutral-900: #28283D;
+
+    /* Font Sisez*/
+
+    --fs-100: 1rem; /* 1.6 1.2*/
+    --fs-200: 1rem; /* 1.6 */
+    --fs-500: 2rem; /* 3.6 3.2*/
+    --fs-700: 2.8rem; /* 4.8 4.0*/
+
+    /* Font Weights */
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-900: 900;
+
+    /* Spacing */
+    --padding-inline: 2rem;
+    --padding-block: 5rem;
+    --gap: 3rem;
+    --gap-grid: 2rem;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+/* Header */
+
+header{
+    display: grid;
+    justify-items: center;
+    padding-block: 3rem;
+    gap: var(--gap);
+}
+
+.title{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    margin-inline: var(--padding-inline);
+}
+
+.title > * {
+    margin-block-end: 1.6rem;
+}
+
+h1{
+    font-size: var(--fs-700);
+    font-weight: var(--fw-900);
+    color: var(--neutral-900);
+}
+
+.subtitle{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-400);
+    color: var(--neutral-600);
+    margin-block-end: 3rem;
+}
+
+/* Butons------------------*/
+
+.buttons{
+    display: grid;
+    gap: 1rem;
+    
+}
+
+.first-top-btn{
+    background-color: var(--cyan-600);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-900);
+    padding: 1.3rem 2rem;
+    border-radius: 50rem;
+    color: var(--neutral-100);
+    word-spacing: 0.3rem;
+}
+
+span{
+    color: var(--cyan-300)
+}
+
+.first-top-btn:hover{
+    background-color: rgba(77, 150, 169, 0.8);
+}
+
+.second-top-btn{
+    background-color: var(--purple-600);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-900);
+    padding: 1.3rem 1.5em;
+    border-radius: 50rem;
+    color: var(--neutral-100)
+}
+
+.second-top-btn:hover{
+    background-color: rgba(133, 95, 177, 0.8);
+}
+
+/* Figure 1 */
+
+.line-box{
+    display: flex;
+    justify-content: center;
+}
+
+.line{
+    height: 6rem; 
+    width: 0;
+    border: 0.01rem solid var(--neutral-300);
+}
+
+.first-info p{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-300);
+
+}
+
+.first-nr{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-900);
+    color: var(--neutral-600);
+}
+
+/* Main */
+
+main{
+    margin-inline: var(--padding-inline);
+    padding-block: 4rem;
+    gap: var(--gap);
+    display: grid;
+}
+
+.grid-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--gap-grid);
+}
+
+.grid-box img{
+    border-radius: 7px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-box img:hover,
+.grid-box img:active{
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info{
+    text-align: center;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.info p{
+    font-size: var(--fs-100);
+    color: var(--neutral-600);
+}
+
+h3{
+    font-size: var(--fs-200);
+    font-weight: var(--fw-900);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--cyan-600);
+}
+
+h2{
+    font-size: var(--fs-500);
+    font-weight: var(--fw-900);
+    color: var(--neutral-900)
+}
+
+/* Figure 2 */
+
+.second-line-box {
+    display: flex;
+    justify-content: center;
+}
+
+.second-line {
+    height: 8rem;
+    width: 0;
+    border: 0.01rem solid var(--neutral-300);
+}
+
+
+/* For being in the middle of the footer line */
+.second-info{
+    position: absolute;
+    top: -2rem;
+    z-index: 1;
+}
+/* -------------------------------------------*/
+
+.second-info p {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-300);
+
+}
+
+.second-nr {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-900);
+    color: var(--neutral-600);
+    background-color: var(--neutral-100);
+}
+
+/* Footer */
+
+.overlay-footer{
+    position: relative;
+    display: grid;
+    justify-items: center;
+}
+
+footer{
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+    padding-block: var(--padding-block);
+    padding-inline: var(--padding-inline);
+    background-image: url(assets/mobile/image-footer.jpg);
+    background-color: var(--cyan-600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.overlay{
+    border-image: fill 1 linear-gradient( #4D96A9E6);
+}
+
+footer h2{
+    color: var(--neutral-100);
+}
+
+footer p{
+    font-size: var(--fs-100);
+    color: var(--neutral-100);
+    line-height: 1.5;
+}
+
+/* Footer Button */
+
+.bottom-btn {
+    background-color: var(--purple-600);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-900);
+    padding: 1.3rem 2rem;
+    border-radius: 50rem;
+    color: var(--neutral-100);
+    word-spacing: 0.3rem;
+}
+
+.bottom-btn span {
+    color: var(--purple-300)
+}
+
+.bottom-btn:hover {
+    background-color: rgba(133, 95, 177, 0.7);
+}
